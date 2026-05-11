@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pub Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🍺 Pub Quiz</h1>
+    <span id="score-display">0 / 10</span>
+  </header>
+
+  <main class="quiz-container">
+    <div id="question-card">
+      <p id="question-number">Question 1 of 10</p>
+      <p id="question-text"></p>
+      <div id="options-grid">
+        <button class="option-btn" onclick="selectAnswer(0)"></button>
+        <button class="option-btn" onclick="selectAnswer(1)"></button>
+        <button class="option-btn" onclick="selectAnswer(2)"></button>
+        <button class="option-btn" onclick="selectAnswer(3)"></button>
+      </div>
+      <button id="next-btn" onclick="nextQuestion()" style="display:none;">Next Question →</button>
+    </div>
+
+    <section id="results" style="display:none;">
+      <h2>Quiz Complete!</h2>
+      <p>Your final score: <strong id="final-score"></strong></p>
+      <ul id="review-list"></ul>
+      <button id="play-again-btn" onclick="resetQuiz()">Play Again</button>
+    </section>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
